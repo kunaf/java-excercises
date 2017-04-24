@@ -25,18 +25,26 @@ public class SalesCommision {
 
     public static void main(String[] args) {
         
-        double[] salary = {500.3, 200, 210, 384.90, 999.9, 872.345};
+         double[] salary = {500.3, 200, 210, 384.90, 1000, 999.9, 872.345, 301, 723, 2003, 1000};
         
-        int counter = 100;
-        //loop to count the salary in same ranges
-        for(int check = 0; check < salary.length; check++) {
-            
-            System.out.printf("%d - %d: ", counter + 100, counter + 199);
-            
-            for(int stars = 0; stars < salary[check]; stars++)
-                System.out.print("*");
+        int counter1 = 100, counter2 = 199, tally = 0;
+        //loop to displays range and counts salries in same the ranges
+        if(counter1 >= 1000)
+            System.out.print(1000);
+        else
+            System.out.printf("%d - %d: ", counter1, counter2);
+            //loop counts salaries in the sam range
+            for(int i = 0; i < salary.length; i++) {
+                if(salary[i] >= counter1 && salary[i] <= counter2)
+                    tally += 1;
+            }
+        
+            System.out.printf("%d", tally);
+            tally = 0; //reset the tally
             
             System.out.println();
+            //counter1 +=100; counter2 += 100;
+        }
         }
     }
     
