@@ -21,7 +21,7 @@ package chapter7arrays;
 /**
  * @author kuna
  */
-public class SalesCommision {
+public class SalesCommisionTrouble {
 
     public static void main(String[] args) {
 
