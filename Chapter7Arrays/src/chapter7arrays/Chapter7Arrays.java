@@ -15,7 +15,10 @@ public class Chapter7Arrays {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       
+       int row = 0 , col = 0;
+        int[][] matrix = new int[row][col];
+        
     }
     
 }
