@@ -19,24 +19,26 @@ public class DuplicateElim {
         
         System.out.println("Enter 5 two digit numbers.");
         
-        //reads value entered by user and stores it in array if it is no a duplicate
+        //reads value entered by user and stores it in array if it is not a duplicate
         for(int i=0;i<number.length;i++) {
-            int val = input.nextInt();
-            if(i == 0)
+            int val = input.nextInt(); //gets two digit number from user
+            if(i == 0) {
                 number[i] = val;
+                System.out.println(number[i]);
+            }
             else {
-                for(int j=0;j<i;j++)
-                    if(number[i-1] != val){
+                while(number[i-1] != val){
                         number[i] = val;
-                       System.out.print(number[i]);
+                       
                     }
+                System.out.println(number[i]);
             }
                 
         }
         System.out.println();
         
         for(int i=0;i<number.length;i++) {
-            System.out.println(number[i]);
+            System.out.print( number[i] + "\t");
         }
         
     }
