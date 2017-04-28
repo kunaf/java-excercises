@@ -12,9 +12,9 @@ import java.util.Scanner;
  */
 public class DuplicateElim {
     
-    private static final int param = 5; 
+    //private static final int param = 5; 
     
-    public static boolean search(int[] array, int value) {
+    /*public static boolean search(int[] array, int value) {
         
         boolean check = false;
         for(int i = 1; i < array.length; i++) {
@@ -28,7 +28,7 @@ public class DuplicateElim {
         return check;
     }
 
-    public static void main(String[] args) {
+    */public static void main(String[] args) {
         Scanner input = new Scanner(System.in);//create new Scanner object
         //array stores numbers entered by users
         int[] number = new int[5];
@@ -39,26 +39,30 @@ public class DuplicateElim {
         for(int i=0;i<number.length;i++) {
             int val = input.nextInt(); //gets two digit number from user
             
-            while(val < 10 && val >= 100) {
-                System.out.println("Enter 2 digit number: ");
-                val = input.nextInt();
+            //loop checks that the number entered is a two digit number
+            while(val < 10 || val > 100) {
+                System.out.println("Enter two digit number");
+                val = input.nextInt(); //gets two digit number from user
             }
-            if(i == 0) {
-                number[i] = val;
-                System.out.println(number[i]);
+            
+             number[i] = val; //assigns value entered to position in the array
+            //tests if number already exists in the array
+            for(int j=0;j<i;j++) {  
+                if(number[j] == val) {
+                    number[i] = 0;
+                    break;
+                    
+                }
+                //System.out.print("val = " + number[j]); //keep track of numbers entered
             }
-            else {
-                check = search(number,i);
-                if(check = true) continue;
-                else System.out.println(number[i]);
-                }     
-            }
-                
-        
+           
+        }       
         System.out.println();
         
-        for(int i=0;i<number.length;i++) {
-            System.out.print( number[i] + "\t");
+        //prints numbers entered without duplicates
+        for(int p=0;p<number.length;p++) {
+            if(number[p] != 0 )
+                System.out.print( number[p] + "\t");
         }
         
     }
