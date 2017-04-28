@@ -11,24 +11,8 @@ import java.util.Scanner;
  * @author kuna
  */
 public class DuplicateElim {
-    
-    //private static final int param = 5; 
-    
-    /*public static boolean search(int[] array, int value) {
-        
-        boolean check = false;
-        for(int i = 1; i < array.length; i++) {
-            if(array[array.length-1] != value) {
-                continue;
-            }
-            else 
-                check = true;   
-        }
-        
-        return check;
-    }
-
-    */public static void main(String[] args) {
+   
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);//create new Scanner object
         //array stores numbers entered by users
         int[] number = new int[5];
