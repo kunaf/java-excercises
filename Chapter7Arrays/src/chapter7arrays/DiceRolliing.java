@@ -19,33 +19,26 @@ public class DiceRolliing {
         //object creation
         SecureRandom random = new SecureRandom();
         //array declaration
-        int[] sum = {0,0,0,0,0,0,0,0,0,0,}, tally = new int[12];
+        int[] sum = {2,3,4,5,6,7,8,9,10,11,12}, tally = new int[12];
+        int total;
+        System.out.printf("\n%s%10s\n","Sum", "Tally");
         //filiing the array containing the sum of 2 die rolls
-        for(int i=0;i<sum.length;i++) {
+        for(int i=0;i<3600000;i++) {
             int die1 = 1 + random.nextInt(6);
             int die2 = 1 + random.nextInt(6);
+            
+            total = die1 + die2;
             //add to array
-            sum[i] = die1 + die2;
-        }
-        
-        //display array sum
-        for(int i: sum)
-            System.out.printf("%d\t", i);
-        
-        System.out.printf("\n%s%10s\n", "Value", "Tally");
-        
-        //searches array sum for similar values and calculates the tally
-        for(int i=0;i<sum.length;i++) {
+           // sum[i] = die1 + die2;
+            
+           tally[total - 2] += 1;  
            
-                for(int match = 0;match < sum.length-1;match++) {
-                    int check = 0;
-                    if(sum[i] == sum[match]) { 
-                        check += 1;
-                        tally[i] += check;
-                    }
-                }       
-            System.out.printf("%d%10d\n", i+1, tally[i]);
         }
+        
+        for(int i = 0; i < tally.length-1;i++) {
+            System.out.printf("%d%12d\n",sum[i], tally[i]);
+        }
+        
        
     }
     
