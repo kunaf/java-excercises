@@ -77,6 +77,7 @@ public class AirlineReservSystem {
                             if(choice == 1)
                                 continue;
                             else
+                                System.out.println("Next flight leaves in 3 hours");
                                 break;
                         }
                     
