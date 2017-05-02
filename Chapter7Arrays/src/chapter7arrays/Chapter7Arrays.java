@@ -15,10 +15,22 @@ public class Chapter7Arrays {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       
-       int row = 0 , col = 0;
-        int[][] matrix = new int[row][col];
+       char[][] turtle= new char[10][10];
+       int j = 0, i = 0, steps = 4;
+        for(j = 0;j<steps-1;j++) {
+                turtle[i][j] = '*';
+            }
         
+        for(;i<steps-1;i++) {
+                turtle[i][j] = '*';
+            }
+        System.out.println(j);
+        System.out.println(i);
+        for(;j>=0;j--) {
+                turtle[i][j] = '*';
+            }
+        System.out.println(j);
+        System.out.println(i);
     }
     
 }
